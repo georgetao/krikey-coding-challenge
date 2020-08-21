@@ -12,6 +12,6 @@ function hello_world(req, res) {
 var server = restify.createServer();
 server.get('/hello/:name' , hello_world);
 
-server.listen(8000, function() {
+server.listen(8080, function() {
 	console.log("Server starting..");
 })
