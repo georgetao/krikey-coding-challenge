@@ -1,0 +1,15 @@
+{
+  "name": "krikey-coding-challenge",
+  "version": "1.0.0",
+  "description": "coding challenge for krikey data engineer",
+  "main": "index.js",
+  "scripts": {
+    "serve": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "George Tao",
+  "license": "ISC",
+  "devDependencies": {
+    "restify": "^8.5.1"
+  }
+}

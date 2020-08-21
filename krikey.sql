@@ -1,0 +1,4 @@
+SELECT *
+FROM AUTHORS
+ORDER BY date_of_birth
+LIMIT 10;
