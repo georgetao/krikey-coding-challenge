@@ -1,16 +1,24 @@
-var restify = require('restify');
 
-function hello_world(req, res) {
+// Inital declarations.
+var restify = require('restify');
+// var err = require('restify-errors');
+
+// Greetings function
+function hello_world(req, res, next) {
 	if (req.params.name == "") {
-		res.send("ERROR: 400 Bad Request - Please provide a name.");
+		res.send(400);
+
+		//ALTERNATIVELY
+		//res.send(new err.BadRequestError('No name provided'));
 	}
 	else {
-		res.send("Hello " + req.params.name + "!");
+		res.json("Hello " + req.params.name + "!");
 	}
 }
 
+// Server stuff
 var server = restify.createServer();
-server.get('/hello/:name' , hello_world);
+server.get('/:name' , hello_world);
 
 server.listen(8080, function() {
 	console.log("Server starting..");
